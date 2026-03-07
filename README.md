@@ -1,8 +1,8 @@
-# Bulk RNA-seq Data Analysis
+## Bulk RNA-seq Data Analysis
 This repository contains the input files and analysis code (analysis.R) used for demonstrating the key steps involved in Bulk RNA-seq data analysis.
 The aim is to provide an overview of the typical RNA-seq analysis workflow, starting from processed count data and proceeding to exploratory analysis, differential expression analysis, and pathway analysis.
 
-Repository Structure
+# Repository Structure
 1. Analysis.R:
    Contains the code required for performing the following analyses:
    1. Principal Component Analysis (PCA)
