@@ -54,7 +54,6 @@ final_counts[1:5,1:5]
 x <- DGEList(counts=final_counts)
 x <- calcNormFactors(x, method='TMM')
 v <- voom(x, plot=T)
-
 vMat <- v$E
 dim(vMat) # 39514    20
 vMat[1:5,1:5] 
@@ -788,3 +787,4 @@ ggsave(filename = "gsea_barplot_tumor_vs_normal.png", g, width = 12, height = 9,
 
 ############################################################################################
 ############################################################################################
+
