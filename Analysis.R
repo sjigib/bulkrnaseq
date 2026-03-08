@@ -627,7 +627,6 @@ library(ggplot2)
 library(data.table)
 
 # Load the hallmark gmt file & convert to a binary matrix:
-gmt_file <- "hallmark.gmt"
 gmt_file <- gmtPathways('hallmark.gmt') 
 names(gmt_file) 
 total_unique_genes <- unique(unlist(gmt_file))
@@ -788,5 +787,4 @@ g
 ggsave(filename = "gsea_barplot_tumor_vs_normal.png", g, width = 12, height = 9, dpi = 500)
 
 ############################################################################################
-
 ############################################################################################
