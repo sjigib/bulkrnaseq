@@ -17,3 +17,4 @@ The aim is to provide an overview of a typical RNA-seq analysis workflow, beginn
 ## References:
 1. https://hbctraining.github.io/rnaseq-cb321/lessons/analysis_methods.html
 2. https://silicogene.com/blog/bulk-rna-seq-data-analysis/
+3. https://pmc.ncbi.nlm.nih.gov/articles/PMC7873980/
