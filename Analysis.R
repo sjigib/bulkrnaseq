@@ -367,14 +367,14 @@ library(ggplot2)
 library(ggrepel)
 library(circlize)
 
-dim(com_exp_mat) # 19622    12
-dim(com_metafile) # 12  5
+dim(com_exp_mat) # 28382    20
+dim(com_metafile) # 20   3
 
 x <- DGEList(counts=com_exp_mat)
 x <- calcNormFactors(x, method='TMM')
 v <- voom(x, plot=T)
 vMat <- v$E
-dim(vMat) # 19622    12
+dim(vMat) # 28382    20
 vMat[1:5,1:5] 
 # In variance_stabilised_counts the rows are the variables and the columns correspond to the samples
 
@@ -384,10 +384,10 @@ down <- rownames(downregulated_genes)[1:50]
 all <- c(up,down)
 
 vMat_sel=vMat[all,]
-dim(vMat_sel) # 105  14
+dim(vMat_sel) # 100  20
 vMat_sel[1:4,1:5]
 vMat_sel=na.omit(vMat_sel)
-dim(vMat_sel)  # 95  14
+dim(vMat_sel)  # 100  20
 
 t_sel=t(vMat_sel)  # transpose so rows are samples and columns correspond to genes
 dim(t_sel)
@@ -396,8 +396,8 @@ ti=ti[order(ti$tissue),,drop=F]
 rownames(ti)=ti$Row.names
 meta1=ti[,1:4]
 exp=ti[,5:dim(ti)[2]]
-dim(meta1)  # 6  6
-dim(exp)  # 6  24
+dim(meta1)  # 20  4
+dim(exp)  # 20  100
 exp[1:4,1:4]
 meta1[1:4,1:4]
 
@@ -566,7 +566,7 @@ dim(exp)    # 20  50
 exp[1:4,1:4]
 head(meta1)
 exp <- as.matrix(exp)
-dim(exp)  # 20  11
+dim(exp)  # 20  50
 colnames(exp)<-gsub("HALLMARK_","",colnames(exp))
 exp[1:4,1:4]
 
@@ -788,4 +788,5 @@ g
 ggsave(filename = "gsea_barplot_tumor_vs_normal.png", g, width = 12, height = 9, dpi = 500)
 
 ############################################################################################
+
 ############################################################################################
