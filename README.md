@@ -11,3 +11,7 @@ The aim is to provide an overview of the typical RNA-seq analysis workflow, star
 2. metadata.csv: This is the file containing metadata information for the samples used in the analysis.
 3. raw_counts.csv: This contains the raw counts matrix for all the samples used in the analysis.
 4. hallmark.gmt: This is the Hallmark gene set file obtained from the MSigDB database for pathway analysis.
+
+## References:
+1. https://hbctraining.github.io/rnaseq-cb321/lessons/analysis_methods.html
+2. https://silicogene.com/blog/bulk-rna-seq-data-analysis/
