@@ -1,11 +1,11 @@
 # Bulk RNA-seq Data Analysis
-This repository contains the input files and analysis code (Analysis.R) used for demonstrating the key steps involved in Bulk RNA-seq data analysis.
-The aim is to provide an overview of the typical RNA-seq analysis workflow, starting from processed count data and proceeding to exploratory analysis, differential expression and pathway analysis.
+This repository contains the input files, scripts for downloading and processing raw FASTQ files, and the downstream analysis code used to demonstrate the key steps involved in bulk RNA-seq data analysis.
+The aim is to provide an overview of a typical RNA-seq analysis workflow, beginning with the processing of raw sequencing data and proceeding through count generation, exploratory data analysis, differential expression analysis, and pathway enrichment analysis.
 
 ## Repository Structure
 1. script1_preprocessing_pipeline.sh: Code for downloading and processing of the raw FASTQ files.
 2. script2_feature_counts.sh: Code for generating the feature counts matrix from STAR BAM files.
-3. script2_analysis.R:
+3. script3_analysis.R:
    Contains the code required for performing the following:
    1. Principal Component Analysis (PCA)
    2. Differential Expression Analysis (DEG)
